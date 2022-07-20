@@ -20,7 +20,7 @@ body {
 }
 /* Cards Parent Container */
 .cards {
-  border: 3px solid rebeccapurple;
+  /* border: 3px solid rebeccapurple; */
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -38,7 +38,7 @@ header {
 .choose-dish,
 .show-recipes {
   background-color: rgba(225, 225, 225, .9);
-  border: 3px solid limegreen;
+  /* border: 3px solid limegreen; */
   max-width: 300px;
   max-height: 300px;
   flex: 1;
