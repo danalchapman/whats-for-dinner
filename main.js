@@ -63,10 +63,10 @@ var desserts = [
 var shownRecipes = [];
 var currentRecipe;
 
-// Event Listeners here
+// Functions here
+// Iteration 1: Display Chosen Recipe
 letsCookButton.addEventListener("click", showRecipe)
 
-// Functions here
 function showRecipe() {
   // show a randomly selected recipe from the given array
   // hide the cookpit icon
