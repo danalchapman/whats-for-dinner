@@ -5,9 +5,12 @@
 // when the dish name appears,
 // the cookpot icon disappears (.hidden)
 
-// Query Selectors here
-var radioButton = document.querySelector(".button");
+// Query Selectors and Arrays here
+var sideButton = document.querySelector("#side-dish");
+var mainButton = document.querySelector("#main-dish");
+var dessertButton = document.querySelector("#dessert-dish");
 var letsCookButton = document.querySelector("#lets-cook-button");
+var cookpotImage = document.querySelector(".cookpot-image");
 
 var sides = [
   "Miso Glazed Carrots",
@@ -56,7 +59,9 @@ var desserts = [
   "Croissants",
   "Eclairs"
 ];
-var shownRecipe = [];
+
+var shownRecipes = [];
+var currentRecipe;
 
 // Event Listeners here
 letsCookButton.addEventListener("click", showRecipe)
@@ -65,4 +70,10 @@ letsCookButton.addEventListener("click", showRecipe)
 function showRecipe() {
   // show a randomly selected recipe from the given array
   // hide the cookpit icon
+}
+
+// do I need multiples of this function for each separate
+// radio button/dish??
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
 }
