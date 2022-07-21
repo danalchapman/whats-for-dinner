@@ -10,6 +10,7 @@ var sideButton = document.querySelector("#side-dish");
 var mainButton = document.querySelector("#main-dish");
 var dessertButton = document.querySelector("#dessert-dish");
 var letsCookButton = document.querySelector("#lets-cook-button");
+
 var cookpotImage = document.querySelector(".cookpot-image");
 
 var sides = [
