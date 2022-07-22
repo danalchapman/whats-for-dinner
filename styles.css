@@ -55,6 +55,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .show-recipes img {
@@ -83,6 +84,18 @@ button {
   padding: 8px 40px 8px 40px;
   font-weight: lighter;
   font-size: 11px;
+}
+
+.recipe p {
+  font-size: small;
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.recipe h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 0;
 }
 
 .hidden {
