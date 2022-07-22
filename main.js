@@ -12,7 +12,8 @@ var dessertButton = document.querySelector("#dessert-dish");
 var letsCookButton = document.querySelector("#lets-cook-button");
 
 var cookpotImage = document.querySelector(".cookpot-image");
-var recipeText = document.querySelector(".recipe");
+var recipeBox = document.querySelector(".recipe");
+var recipeText = document.querySelector(".recipe-text");
 
 var sides = [
   "Miso Glazed Carrots",
@@ -69,8 +70,9 @@ var currentRecipe;
 // Iteration 1: Display Chosen Recipe
 letsCookButton.addEventListener("click", showRecipe)
 
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
+function getRandomRecipe(array) {
+  var index = Math.floor(Math.random() * array.length);
+  return array[index]
 }
 
 function hideShowImage(show, hide) {
@@ -79,11 +81,20 @@ function hideShowImage(show, hide) {
 }
 
 function generateRandomRecipe() {
-  
+  var newRecipe = "";
+  if (sideButton.checked) {
+    newRecipe = getRandomRecipe(sides);
+  } else if (mainButton.checked) {
+    newRecipe = getRandomRecipe(mains);
+  } else if (dessertButton.checked) {
+    newRecipe = getRandomRecipe(desserts);
+  }
+  recipeText.innerText = newRecipe;
 }
 
 function showRecipe() {
   // show a randomly selected recipe from the given array
   // hide the cookpit icon
-  hideShowImage(recipeText, cookpotImage);
+  hideShowImage(recipeBox, cookpotImage);
+  generateRandomRecipe()
 }
