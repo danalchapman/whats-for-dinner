@@ -12,6 +12,7 @@ var dessertButton = document.querySelector("#dessert-dish");
 var letsCookButton = document.querySelector("#lets-cook-button");
 
 var cookpotImage = document.querySelector(".cookpot-image");
+var recipeText = document.querySelector(".recipe");
 
 var sides = [
   "Miso Glazed Carrots",
@@ -68,13 +69,21 @@ var currentRecipe;
 // Iteration 1: Display Chosen Recipe
 letsCookButton.addEventListener("click", showRecipe)
 
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+function hideShowImage(show, hide) {
+  show.classList.remove("hidden");
+  hide.classList.add("hidden");
+}
+
+function generateRandomRecipe() {
+  
+}
+
 function showRecipe() {
   // show a randomly selected recipe from the given array
   // hide the cookpit icon
-}
-
-// do I need multiples of this function for each separate
-// radio button/dish??
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
+  hideShowImage(recipeText, cookpotImage);
 }

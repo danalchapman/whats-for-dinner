@@ -7,23 +7,24 @@
     <header>What's for Dinner?</header>
     <section class="cards">
       <section class="choose-dish">
-        <form></br>
+        <form class="form">
           <h3>What are you looking for?<span>*</span></h3>
-          <input type="radio" class="button" id="side-dish">
-          <label for="side-dish">Side</label></br></br>
-          <input type="radio" class="button" id="main-dish">
-          <label for="main-dish">Main Dish</label></br></br>
-          <input type="radio" class="button" id="dessert-dish">
-          <label for="dessert-dish">Dessert</label></br></br>
-          <!-- <input type="radio" id="entire-meal"> -->
-          <!-- <label for="entire-meal">Entire Meal</label></br> -->
+          <div class="radio-buttons">
+            <label for="side-dish"><input type="radio" name="dish" class="button" id="side-dish"> Side</label>
+            <label for="main-dish"><input type="radio" name="dish" class="button" id="main-dish"> Main Dish</label>
+            <label for="dessert-dish"><input type="radio" name="dish" class="button" id="dessert-dish"> Dessert</label>
+            <!-- <input type="radio" id="entire-meal"> -->
+            <!-- <label for="entire-meal">Entire Meal</label> -->
+          </div>
           <button id="lets-cook-button" type="button">LET'S COOK!</button>
         </form>
       </section>
-      <section class="show-recipes recipe-shown hidden">
+      <section class="show-recipes recipe-shown">
         <img class="cookpot-image" src="./assets/cookpot.svg" alt="minimalistic cook pot" />
-        <!-- <p>You should make:</p>
-        <h1>Recipe Here</h1> -->
+        <div class="recipe hidden">
+          <p>You should make:</p>
+          <h1 class="recipe-text">Recipe Here</h1>
+        </div>
       </section>
     </section>
   </body>
