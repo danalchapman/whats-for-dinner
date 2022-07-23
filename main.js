@@ -1,16 +1,12 @@
-// when user selects a dish open and then
-// clicks the "lets eat" button, the user
-// should see a random dish from that cat
-
-// when the dish name appears,
-// the cookpot icon disappears (.hidden)
-
 // Query Selectors and Arrays here
 var sideButton = document.querySelector("#side-dish");
 var mainButton = document.querySelector("#main-dish");
 var dessertButton = document.querySelector("#dessert-dish");
 var letsCookButton = document.querySelector("#lets-cook-button");
+
 var cookpotImage = document.querySelector(".cookpot-image");
+var recipeBox = document.querySelector(".recipe");
+var recipeText = document.querySelector(".recipe-text");
 
 var sides = [
   "Miso Glazed Carrots",
@@ -67,13 +63,29 @@ var currentRecipe;
 // Iteration 1: Display Chosen Recipe
 letsCookButton.addEventListener("click", showRecipe)
 
-function showRecipe() {
-  // show a randomly selected recipe from the given array
-  // hide the cookpit icon
+function getRandomRecipe(array) {
+  var index = Math.floor(Math.random() * array.length);
+  return array[index]
 }
 
-// do I need multiples of this function for each separate
-// radio button/dish??
-function getRandomIndex(array) {
-  return Math.floor(Math.random() * array.length);
+function hideShowImage(show, hide) {
+  show.classList.remove("hidden");
+  hide.classList.add("hidden");
+}
+
+function generateRandomRecipe() {
+  var newRecipe = "";
+  if (sideButton.checked) {
+    newRecipe = getRandomRecipe(sides);
+  } else if (mainButton.checked) {
+    newRecipe = getRandomRecipe(mains);
+  } else if (dessertButton.checked) {
+    newRecipe = getRandomRecipe(desserts);
+  }
+  recipeText.innerText = newRecipe;
+}
+
+function showRecipe() {
+  hideShowImage(recipeBox, cookpotImage);
+  generateRandomRecipe()
 }
