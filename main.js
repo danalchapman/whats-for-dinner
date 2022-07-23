@@ -1,10 +1,3 @@
-// when user selects a dish open and then
-// clicks the "lets eat" button, the user
-// should see a random dish from that cat
-
-// when the dish name appears,
-// the cookpot icon disappears (.hidden)
-
 // Query Selectors and Arrays here
 var sideButton = document.querySelector("#side-dish");
 var mainButton = document.querySelector("#main-dish");
@@ -93,8 +86,6 @@ function generateRandomRecipe() {
 }
 
 function showRecipe() {
-  // show a randomly selected recipe from the given array
-  // hide the cookpit icon
   hideShowImage(recipeBox, cookpotImage);
   generateRandomRecipe()
 }
