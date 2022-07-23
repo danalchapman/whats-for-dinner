@@ -11,7 +11,7 @@ red - #ee5253
 /* Parent Container/s */
 /* Total Parent Container */
 body {
-  border: 3px solid white;
+  /* border: 3px solid white; */
   background-image: url(./assets/burger-friends.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -20,7 +20,7 @@ body {
 }
 /* Cards Parent Container */
 .cards {
-  border: 3px solid rebeccapurple;
+  /* border: 3px solid rebeccapurple; */
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
@@ -29,7 +29,7 @@ body {
 /* Children Containers */
 /* Header */
 header {
-  border: 3px solid forestgreen;
+  /* border: 3px solid forestgreen; */
   background-color: #0fb9b1;
   padding: 15px;
 }
@@ -38,7 +38,7 @@ header {
 .choose-dish,
 .show-recipes {
   background-color: rgba(225, 225, 225, .9);
-  border: 3px solid limegreen;
+  /* border: 3px solid limegreen; */
   max-width: 300px;
   max-height: 300px;
   flex: 1;
