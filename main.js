@@ -1,7 +1,8 @@
-// Query Selectors and Arrays here
+// Query Selectors and Arrays 
 var sideButton = document.querySelector("#side-dish");
 var mainButton = document.querySelector("#main-dish");
 var dessertButton = document.querySelector("#dessert-dish");
+var mealButton = document.querySelector("#entire-meal");
 var letsCookButton = document.querySelector("#lets-cook-button");
 
 var cookpotImage = document.querySelector(".cookpot-image");
@@ -56,11 +57,9 @@ var desserts = [
   "Eclairs"
 ];
 
-var shownRecipes = [];
-var currentRecipe;
-
-// Functions here
+// Functions and Event Listeners
 // Iteration 1: Display Chosen Recipe
+// Iteration 2: Entire Meal Functionality
 letsCookButton.addEventListener("click", showRecipe)
 
 function getRandomRecipe(array) {
@@ -81,6 +80,8 @@ function generateRandomRecipe() {
     newRecipe = getRandomRecipe(mains);
   } else if (dessertButton.checked) {
     newRecipe = getRandomRecipe(desserts);
+  } else if (mealButton.checked) {
+    newRecipe = `${getRandomRecipe(mains)} with a side of ${getRandomRecipe(sides)} and ${getRandomRecipe(desserts)} for dessert!`;
   }
   recipeText.innerText = newRecipe;
 }
