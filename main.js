@@ -1,4 +1,4 @@
-// Query Selectors and Arrays 
+// Query Selectors and Arrays
 var sideButton = document.querySelector("#side-dish");
 var mainButton = document.querySelector("#main-dish");
 var dessertButton = document.querySelector("#dessert-dish");
@@ -58,8 +58,6 @@ var desserts = [
 ];
 
 // Functions and Event Listeners
-// Iteration 1: Display Chosen Recipe
-// Iteration 2: Entire Meal Functionality
 letsCookButton.addEventListener("click", showRecipe)
 
 function getRandomRecipe(array) {
